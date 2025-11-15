@@ -1,7 +1,7 @@
 # Module de développement web
 
 * Support du cours:
-  * [Chapitre 1 et 2 : HTML, CSS, introduction JS](Documents/Développement%20Web%20125.pdf)
+  * [Chapitre 1 et 2 : HTML, CSS, introduction JS](Documents/Développement%20Web%20163.pdf)
 
 * Formations:
   * [Introduction à Git et GitHub (Coursera)](https://www.coursera.org/programs/professeurs-casablanca-2023-qrepg/learn/introduction-git-github?authProvider=emsi&source=search)
