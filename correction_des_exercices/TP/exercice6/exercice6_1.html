@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>exercice 6.1</title>
+    <style>
+        ul li:nth-child(even) {
+            background-color: azure;
+        }
+
+        ul li:nth-child(odd) {
+            background-color: #eee;
+        }
+
+        ul {
+            list-style: none;
+            padding: 10px;
+            width: 150px;
+            border-radius: 5px;
+        }
+
+        ul li {
+            padding: 5px;
+
+        }
+    </style>
+</head>
+
+<body>
+    <div id="product-list"></div>
+    <script>
+        const products = ["Laptop", "Smartphone"];
+        const ul = document.createElement("ul");
+        for (let element of products) {
+            const li = document.createElement('li');
+            li.textContent = element;
+            ul.appendChild(li);
+        }
+        const div = document.querySelector('#product-list');
+        div.appendChild(ul);
+    </script>
+
+</body>
+
+</html>
