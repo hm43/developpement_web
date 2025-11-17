@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>exercice 6.1</title>
+    <style>
+        span.initial {
+            color: darkblue;
+            font-weight: bold;
+        }
+
+        span.name {
+            background-color: aliceblue;
+            margin-right: 10px;
+            padding: 5px 10px;
+            border-radius: 6px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="list"></div>
+    <script>
+        const initials = ["A", "B", "C"];
+        const names = ["Alice", "Ali", "Amine", "Benoit", "Bilal", "Carla", "Charles"];
+        const div = document.getElementById("list");
+        for (let initial of initials) {
+            const newArr = names.filter(function (valeur) {
+                return valeur[0] === initial;
+            });
+
+            const p = document.createElement("p");
+            const spanInitial = document.createElement("span");
+            spanInitial.className = "initial";
+            spanInitial.textContent = initial + " : ";
+            p.appendChild(spanInitial);
+            for (let nom of newArr) {
+                const spanNom = document.createElement("span");
+                spanNom.textContent = nom;
+                spanNom.className = "name";
+                p.appendChild(spanNom);
+            }
+            div.appendChild(p);
+        }
+    </script>
+</body>
+
+</html>

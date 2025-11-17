@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        span {
+            padding: 10px;
+        }
+
+        span.initial {
+            color: darkblue;
+            font-weight: bold;
+        }
+
+        span.nom {
+            background-color: aliceblue;
+            border-radius: 30px;
+            margin-right: 10px;
+            padding: 5px 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="list"></div>
+    <script>
+        const initials = ["A", "B", "C"];
+        const names = ["Alice", "Ali", "Amine", "Benoit", "Bilal", "Carla", "Charles"];
+        const div = document.getElementById("list");
+        for (let i of initials) {
+            const p = document.createElement("p");
+            const spanInitial = document.createElement("span");
+            spanInitial.textContent = i + " : ";
+            spanInitial.className = "initial";
+            p.appendChild(spanInitial);
+            const newNames = names.filter(function (v) {
+                return v[0] === i;
+            })
+            newNames.forEach(function (nom) {
+                const spanName = document.createElement("span");
+                spanName.textContent = nom;
+                spanName.className = 'nom';
+                p.appendChild(spanName);
+            })
+
+            div.append(p);
+        }
+
+
+    </script>
+</body>
+
+</html>
