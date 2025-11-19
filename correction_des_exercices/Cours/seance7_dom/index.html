@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+    <style>
+        p {
+            border: 1px solid red;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="divId">
+    </div>
+    <div class="div1">
+
+    </div>
+    <div class="div1 div2">
+        <p>paragraph 1</p>
+        <p>paragraph 2</p>
+    </div>
+
+    <script>
+
+        const divs = document.getElementsByClassName("div1");
+
+        for (let div of divs) {
+            div.style.width = "200px";
+            div.style.border = "1px solid";
+        }
+
+        const divId = document.getElementById("divId");
+        divId.style.width = "200px";
+        divId.style.height = "50px";
+        divId.style.backgroundColor = "red";
+
+        let p1 = document.querySelector(".div1 p");
+        const ps = document.querySelectorAll(".div1 p");
+
+        divId.outerHTML = "<h1>Titre 1</h1>";
+        divs[0].innerHTML = "<p>paragraph de divs[0]</p>";
+        divs[1].innerHTML += "<p> paragraph 3</p>";
+        p1 = document.querySelector(".div2 p");
+        p1.textContent = "autre text";
+        const newP = document.createElement("p");
+        newP.textContent = "paragraph 4";
+        divs[1].prepend(newP);
+        const newP2 = document.createElement("p");
+        newP2.textContent = "paragraph 5";
+        divs[1].append(newP2);
+    </script>
+</body>
+
+</html>
